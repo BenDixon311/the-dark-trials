@@ -1,19 +1,38 @@
 import React from 'react';
 import logo from './logo.svg';
-import { Switch, Route, withRouter } from 'react-router-dom';
+import { Switch, Route, withRouter, BrowserRouter, Router } from 'react-router-dom';
 
 //import routes
 import Main from './Components/Main/index';
+import Contact from './Components/Contact/index'
 import Header from './Components/Nav/index';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-        <Main />
-        </div>
+      <div className="App">
+          
+          <BrowserRouter>
+            <Switch>
+              <Route exact path ="/">
+                <Main />
+              </Route>
+              <Route path = "/books">
+
+              </Route>
+              <Route path = "/contact">
+                <Contact />
+              </Route>
+            </Switch>
+          </BrowserRouter>
+          
+      </div>
     
   );
 }

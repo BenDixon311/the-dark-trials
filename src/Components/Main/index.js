@@ -1,92 +1,151 @@
 import React, { useState } from 'react';
-import { Frame, useCycle } from 'framer'
+import { makeStyles } from '@material-ui/core/styles';
+import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
+import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
+import { Frame } from 'framer'
 
+import Media from 'react-bootstrap/Media'
+
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
+
+import Form from 'react-bootstrap/Form'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
+
+import Navbar from '../Nav/index'
+import image from '../../images/DarkTrials_WEB.jpg'
+import bgImage from '../../images/bg-img.jpg'
+
+const list = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1,  transition: { duration: 2 } },
+  }
+
+//original animation//
+// const list = {
+//     hidden: { opacity: 0, x: 0, y: "50%" },
+//     visible: { opacity: 1, x: "30%", transition: { duration: 2 } },
+//   }
+
+const useStyles = makeStyles({
+    root: {
+        width: 427,
+      },
+      media: {
+        maxWidth: '70%',
+        height: 'auto',
+        margin: '0 auto'
+       
+      },
+      form: {
+          margin: '10px'
+      },
+      formParent: {
+        marginTop: '70%'
+      }
+})
 
 
 
 export default function Main() {
-    const [scale, cycle] = useCycle(
-       1, 3
-      )
+    const [mini, setMini] = React.useState(true);
+    const classes = useStyles();
 
-      const list = {
-        hidden: { opacity: 0, x: 0, y: "50%" },
-        visible: { opacity: 1, x: "100%", transition: { duration: 2 } },
-      }
+
+   
 
     return (
-        <div>
-           <Frame
-            variants={list}
-            initial="hidden"
-            animate="visible"
-            >
-            {
-                // Container frame to position the text in the center
-            }
-            <Frame width={"100%"} height={"auto"} center>
-                {
-                    // Mask frame for top line
-                }
-                <Frame
-                    width={"100%"}
-                    height={26 * 1.2}
-                    y={-26 * 1.2}
-                    background={""}
-                    overflow={ "hidden" }
-                >
-                    {
-                        // Frame for top line
-                    }
-                    <Frame
-                        size={"100%"}
-                        background={""}
-                        style={{
-                            fontFamily: "Montserrat, Work Sans, sans-serif",
-                            fontWeight: "bold",
-                            letterSpacing: "-0.04em",
-                            fontSize: 26,
-                            color: "#FFF",
-                        }}
-                        initial={{ y: 26 * 1.2 }}
-                        animate={{ y: 0}}
-                        transition={{ ease: "easeOut", duration: 3.2 }}
+        <React.Fragment>
+            <img src={bgImage} id="bg" />
+                <Navbar />
+           
+                    <Container> 
+                    
+                        
+                    <Row className="align-items-center">
+                            <Col lg={5} md={5} className="mt-4 pt-2 pt-sm-0">
+                                <div className="position-relative">
+                                    <img src={image} className="rounded img-fluid mx-auto d-block mb-2" alt="" />
+                                    {/* <div className="play-icon">
+                                        <Link onClick={this.openModal}  to="#" className="play-btn video-play-icon">
+                                            <i className="mdi mdi-play text-primary rounded-pill bg-white shadow"></i>
+                                        </Link>
+                                    </div> */}
+                                </div>
+                            </Col>
 
-                    >
-                       The Dark
-                    </Frame>
-                </Frame>
-                {
-                    // Mask frame for bottom line
-                }
-                <Frame width={"100%"} height={26 * 1.2} y={0} background={""} overflow={ "hidden" }>
-                    {
-                        // Frame for bottom line
-                    }
-                    <Frame
-                        size={"100%"}
-                        background={""}
-                        style={{
-                            fontFamily: "Montserrat, Work Sans, sans-serif",
-                            fontWeight: "bold",
-                            letterSpacing: "-0.04em",
-                            fontSize: 26,
-                            color: "#FFF",
-                        }}
-                        initial={{ y: -26 * 1.2 }}
-                        animate={{ y: 0 }}
-                        transition={{
-                            ease: "easeOut",
-                            duration: 3.2,
-                        }}
-                    >
-                       Trials
-                    </Frame>
-                </Frame>
-            </Frame>
-        </Frame>
-          
-        </div>
+                            <Col lg={7} md={7} className="mt-4 pt-2 mt-sm-0 pt-sm-0">
 
+
+                                        <Card className="customer-testi text-center">
+                                            
+                                                <CardContent>
+                                                <h1 className="title-heading main-font">THE DARK TRIALS</h1>
+                                                <p className="text-muted h6">I enjoy hearing from readers, and do my best to read and
+                                                    respond to every message. Drop me a line in the box below. And if you want
+                                                    some cool insider updates like title and cover reveals for upcoming books along
+
+                                                    with special deals, be sure to connect with me on social media by clicking the
+                                                    links at the top of the page. Hope to see you around. – TJ</p>
+                                            
+                                                </CardContent>
+                                            </Card>
+                                            <Row>
+                                            <Col lg={4} sm={false}></Col>
+                                            <Col lg={4} sm={12} className="mb-1 mt-2 justify-content-center">
+                                                <Media className="customer-testi m-2" >
+                                                  {/* <img src={review.img} style={{height:65, width:65}} className="avatar avatar-small mr-3 rounded shadow" alt=""/> */}
+                                                  <Media className="content p-3 shadow rounded bg-white position-relative" body>
+                                                      
+                                                      <p className="text-muted mt-2">" Here is my review "</p>
+                                                      <h6 className="text-primary">Pino Paladino <small className="text-muted">Bassist</small></h6>
+                                                  </Media>
+                                              </Media>
+                                              </Col>
+                                              <Col lg={4} sm={false}></Col>
+                                            </Row>
+                               
+                             
+                            </Col>
+                        </Row>
+                        <Row>
+                        <Col className="mb-3">
+                            <Card className="mt-3">
+                            <Form className={classes.form}>
+                                        <Form.Group controlId="formBasicEmail">
+                                        <h1 className="title-heading main-font">Sign Up</h1>
+                                            <Form.Label>Join the mailing list for updates and
+                                            your <i>FREE</i> e-copy of The Dark Trials (for a very limited time).</Form.Label>
+                                            <Form.Control type="email" placeholder="Enter email" />
+                                           
+                                            <Form.Text className="text-muted">
+                                            We'll never share your email with anyone else.
+                                            </Form.Text>
+                                        </Form.Group>
+                                        <Button variant="primary" type="submit">
+                                            Sign Up
+                                            </Button>
+
+                                       
+                                    </Form>
+                                </Card>
+                            </Col>
+                        </Row>
+
+                        
+                    
+                {/* </Frame> */}
+               
+            
+            </Container>
+       
+        </React.Fragment>
     )
 }
