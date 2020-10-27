@@ -21,7 +21,7 @@ import Button from 'react-bootstrap/Button'
 
 import Navbar from '../Nav/index'
 import image from '../../images/DarkTrials_WEB.jpg'
-import bgImage from '../../images/bg-img.jpg'
+import bgImage from '../../images/DarkTrials_WEBBackground.jpg'
 
 const list = {
     hidden: { opacity: 0 },
@@ -36,7 +36,7 @@ const list = {
 
 const useStyles = makeStyles({
     root: {
-        width: 427,
+        marginTop: '100px'
       },
       media: {
         maxWidth: '70%',
@@ -69,7 +69,7 @@ export default function Main() {
                     <Container> 
                     
                         
-                    <Row className="align-items-center">
+                    <Row className="align-items-center" style={{marginTop: '100px'}}>
                             <Col lg={5} md={5} className="mt-4 pt-2 pt-sm-0">
                                 <div className="position-relative">
                                     <img src={image} className="rounded img-fluid mx-auto d-block mb-2" alt="" />
@@ -82,32 +82,20 @@ export default function Main() {
                             </Col>
 
                             <Col lg={7} md={7} className="mt-4 pt-2 mt-sm-0 pt-sm-0">
-
-
-                                        <Card className="customer-testi text-center">
-                                            
-                                                <CardContent>
-                                                <h1 className="title-heading main-font">THE DARK TRIALS</h1>
-                                                <p className="text-muted h6">I enjoy hearing from readers, and do my best to read and
+                                                <h1 className="title-heading main-font" style={{color: 'white'}}>THE DARK TRIALS</h1>
+                                                <p className="text-white h4">I enjoy hearing from readers, and do my best to read and
                                                     respond to every message. Drop me a line in the box below. And if you want
                                                     some cool insider updates like title and cover reveals for upcoming books along
 
                                                     with special deals, be sure to connect with me on social media by clicking the
                                                     links at the top of the page. Hope to see you around. – TJ</p>
                                             
-                                                </CardContent>
-                                            </Card>
-                                            <Row>
+                                           
+                                            <Row className="mt-4">
                                             <Col lg={4} sm={false}></Col>
                                             <Col lg={4} sm={12} className="mb-1 mt-2 justify-content-center">
-                                                <Media className="customer-testi m-2" >
-                                                  {/* <img src={review.img} style={{height:65, width:65}} className="avatar avatar-small mr-3 rounded shadow" alt=""/> */}
-                                                  <Media className="content p-3 shadow rounded bg-white position-relative" body>
-                                                      
                                                       <p className="text-muted mt-2">" Here is my review "</p>
-                                                      <h6 className="text-primary">Pino Paladino <small className="text-muted">Bassist</small></h6>
-                                                  </Media>
-                                              </Media>
+                                                      <h6 className="text-primary">Pino Paladino <small className="text-muted">Bassist</small></h6> 
                                               </Col>
                                               <Col lg={4} sm={false}></Col>
                                             </Row>
