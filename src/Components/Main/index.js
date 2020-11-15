@@ -20,6 +20,8 @@ import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 
 import Navbar from '../Nav/index'
+import SignupForm from '../SignupForm'
+import Footer from '../Footer/index';
 import image from '../../images/DarkTrials_WEB.jpg'
 import bgImage from '../../images/DarkTrials_WEBBackground.jpg'
 
@@ -63,10 +65,11 @@ export default function Main() {
 
     return (
         <React.Fragment>
+            <div>
             <img src={bgImage} id="bg" />
                 <Navbar />
            
-                    <Container> 
+                    <Container style={{textAlign: 'center'}}> 
                     
                         
                     <Row className="align-items-center" style={{marginTop: '100px'}}>
@@ -83,57 +86,56 @@ export default function Main() {
 
                             <Col lg={7} md={7} className="mt-4 pt-2 mt-sm-0 pt-sm-0">
                                                 <h1 className="title-heading main-font" style={{color: 'white'}}>THE DARK TRIALS</h1>
-                                                <p className="text-white h4">I enjoy hearing from readers, and do my best to read and
-                                                    respond to every message. Drop me a line in the box below. And if you want
-                                                    some cool insider updates like title and cover reveals for upcoming books along
-
-                                                    with special deals, be sure to connect with me on social media by clicking the
-                                                    links at the top of the page. Hope to see you around. – TJ</p>
+                                                <p className="text-white h4">THE DARK TRIALS is the exciting first book in The Dark Trials series. A coming-of-age YA paranormal
+                                                    thriller, THE DARK TRIALS is full of dark mystery, supernatural thrills, and heart-wrenching twists that
+                                                    will keep you turning the page until the end.</p>
                                             
                                            
                                             <Row className="mt-4">
                                             <Col lg={4} sm={false}></Col>
                                             <Col lg={4} sm={12} className="mb-1 mt-2 justify-content-center">
-                                                      <p className="text-muted mt-2">" Here is my review "</p>
-                                                      <h6 className="text-primary">Pino Paladino <small className="text-muted">Bassist</small></h6> 
+                                                      <p className="text-muted mt-2">"Wow, I really loved this book!"</p>
+                                                      <h6 className="text-primary">J.,<small className="text-muted">Reader</small></h6> 
                                               </Col>
                                               <Col lg={4} sm={false}></Col>
                                             </Row>
-                               
-                             
-                            </Col>
-                        </Row>
-                        <Row>
-                        <Col className="mb-3">
-                            <Card className="mt-3">
-                            <Form className={classes.form}>
-                                        <Form.Group controlId="formBasicEmail">
-                                        <h1 className="title-heading main-font">Sign Up</h1>
-                                            <Form.Label>Join the mailing list for updates and
-                                            your <i>FREE</i> e-copy of The Dark Trials (for a very limited time).</Form.Label>
-                                            <Form.Control type="email" placeholder="Enter email" />
-                                           
-                                            <Form.Text className="text-muted">
-                                            We'll never share your email with anyone else.
-                                            </Form.Text>
-                                        </Form.Group>
-                                        <Button variant="primary" type="submit">
-                                            Sign Up
-                                            </Button>
+                                            <Row className="mt-4">
+                                            <Col className="mb-3">
+                                                {/* <Card className="mt-3">
+                                                <Form className={classes.form}>
+                                                            <Form.Group controlId="formBasicEmail">
+                                                            <h1 className="title-heading main-font">Sign Up</h1>
+                                                                <Form.Label>Join the mailing list for updates and
+                                                                your <i>FREE</i> e-copy of The Dark Trials (for a very limited time).</Form.Label>
+                                                                <Form.Control type="email" placeholder="Enter email" />
+                                                            
+                                                                <Form.Text className="text-muted">
+                                                                We'll never share your email with anyone else.
+                                                                </Form.Text>
+                                                            </Form.Group>
+                                                            <Button variant="primary" type="submit">
+                                                                Sign Up
+                                                                </Button>
 
-                                       
-                                    </Form>
-                                </Card>
-                            </Col>
+                                                        
+                                                        </Form>
+                                                    </Card> */}
+                                                    <SignupForm />
+                                                </Col>
+                                            </Row>
+                            </Col>  
                         </Row>
+                        
 
                         
                     
                 {/* </Frame> */}
-               
+                
             
             </Container>
-       
+            
+            </div>
+            <Footer />
         </React.Fragment>
     )
 }

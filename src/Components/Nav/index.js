@@ -48,9 +48,8 @@ return (
             </Nav>
         </Navbar.Collapse>
         <Navbar.Collapse className="justify-content-end">
-            <a href="#twitter" className={classes.icon}><Twitter /></a>
-            <a href="#twitter" className={classes.icon}><Facebook /></a>
-            <a href="#twitter" className={classes.icon}><Instagram /></a>
+            <a href="twitter.com/TJKAuthor" className={classes.icon}><Twitter /></a>
+            <a href="facebook.com/TJKAuthor" className={classes.icon}><Facebook /></a>
         </Navbar.Collapse>
         </Container>
         </Navbar>

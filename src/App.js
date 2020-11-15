@@ -5,6 +5,7 @@ import { Switch, Route, withRouter, BrowserRouter, Router } from 'react-router-d
 //import routes
 import Main from './Components/Main/index';
 import Contact from './Components/Contact/index'
+import Books from './Components/Books/index';
 import Header from './Components/Nav/index';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -24,7 +25,7 @@ function App() {
                 <Main />
               </Route>
               <Route path = "/books">
-
+                <Books />
               </Route>
               <Route path = "/contact">
                 <Contact />

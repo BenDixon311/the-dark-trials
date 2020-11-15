@@ -12,6 +12,7 @@ import Typography from '@material-ui/core/Typography';
 
 import portrait from '../../images/TJK-portrait.jpeg'
 import Navbar from '../Nav/index'
+import Footer from '../Footer/index'
 
 
 const useStyles = makeStyles({
@@ -54,6 +55,7 @@ export default function Contact() {
                             </Col>
                         </Row>
                     </Container>
+                    <Footer />
                     </React.Fragment>
 
     )
