@@ -11,8 +11,30 @@ background-size: auto;
   background-size: cover; */
 } 
 
+
+
 .main-font {
   font-family: "Bebas Neue"
+}
+
+.secondary-font {
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+.zoom {
+  transition: transform .5s;
+}
+.zoom:hover {
+  /* -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5); */
+  transform: skewX(1deg)
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  /* bottom: 0; */
 }
 
 #bg {
@@ -22,10 +44,6 @@ background-size: auto;
   min-width: 100%;
   min-height: 100%;
   
-}
-
-.bg-footer {
-  background-color: #35374A !important;
 }
 
 .App-logo {
@@ -75,7 +93,7 @@ background-size: auto;
 /* All my added stuff */
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .sidebar {
@@ -122,18 +140,15 @@ body {
   margin-right: 30px;
 }
 
-/* #main {
-  padding: 16px;
-  margin-left: 85px;
-  transition: margin-left 0.5s;
-} */
+.margin-size {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
 
-@media screen and (max-height: 450px) {
-  .sidebar {
-    padding-top: 15px;
-  }
-  .sidebar a {
-    font-size: 18px;
+@media only screen and (max-width: 450px) {
+  .margin-size {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
 

@@ -37,7 +37,7 @@ const classes = useStyles();
 return (
     <div className={classes.nav}>
          
-       <Navbar bg="dark" expand="lg" variant="dark">
+       <Navbar  expand="lg" variant="dark">
        <Container>
         <Navbar.Brand href="/">T. James Kelly</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -7,16 +7,18 @@ import Twitter from '@material-ui/icons/Twitter';
 export default function Footer() {
 
     return (
-        <footer className="page-footer font-small unique-color-dark text-light mt-4 bg-dark" >
+        <footer className="page-footer footer font-small unique-color-dark text-dark mt-4 bg-light" >
         
-          <div style={{backgroundColor: '#6F7480'}}>
+          {/* <div style={{backgroundColor: '#6F7480'}}>
             <div className="container">
         
               <div className="row py-4 d-flex align-items-center">
         
-                {/* <div className="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                <div className="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
                   <h6 className="mb-0">Get connected with us on social networks!</h6>
-                </div> */}
+                </div>
+               
+ 
         
                 <div className="col-md-6 col-lg-7 text-center text-md-right">
         
@@ -41,9 +43,14 @@ export default function Footer() {
               </div>
         
             </div>
-          </div>
+          </div> */}
+           <div class="ml-form-embed"
+                  data-account="2501029:a3l9s8z2d6"
+                  data-form="3035186:q1p6t3"
+                  id="footer">
+                </div>
         
-          <div className="container text-center text-md-left mt-5">
+          <div className="container text-center text-md-left mt-5 text-dark">
         
             <div className="row mt-3">
         
@@ -51,9 +58,7 @@ export default function Footer() {
         
                 <h4 className=" main-font">T. James Kelly</h4>
                 <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}} />
-                {/* <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                  consectetur
-                  adipisicing elit.</p> */}
+               
         
               </div>
         
@@ -62,7 +67,7 @@ export default function Footer() {
                 <h6 className="text-uppercase font-weight-bold">Books</h6>
                 <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}} />
                 <p>
-                  <a style={{textDecoration: 'none'}} className="text-light" href="/books">The Dark Trials</a>
+                  <a style={{textDecoration: 'none'}} className="text-dark" href="/books">The Dark Trials</a>
                 </p>
             
         
@@ -73,7 +78,7 @@ export default function Footer() {
                 <h6 className="text-uppercase font-weight-bold">About</h6>
                 <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}} />
                 <p>
-                  <a style={{textDecoration: 'none'}} className="text-light" href="/contact">T. James Kelly Bio</a>
+                  <a style={{textDecoration: 'none'}} className="text-dark" href="/contact">T. James Kelly Bio</a>
                 </p>
               
         
@@ -84,7 +89,7 @@ export default function Footer() {
                 <h6 className="text-uppercase font-weight-bold">Contact</h6>
                 <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}} />
                 <p>
-                <a style={{textDecoration: 'none'}} className="text-light" href="mailto:TJKAuthor@gmail.com">
+                <a style={{textDecoration: 'none'}} className="text-dark" href="mailto:TJKAuthor@gmail.com">
                     Email
                 </a>
                 </p>
